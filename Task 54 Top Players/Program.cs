@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task_53_Hospital
+namespace Task_54_Top_Players
 {
     internal class Program
     {
