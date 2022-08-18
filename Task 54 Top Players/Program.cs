@@ -22,20 +22,18 @@ namespace Task_53_Hospital
             new Player("Влад", 43, 320),
             new Player("Кристина", 19, 850)};
 
-            var sortedByLevel = players.OrderByDescending(p => p.Level).Take(3);
+            int numbersTopPlayers = 3;
+            var sortedByLevel = players.OrderByDescending(p => p.Level).Take(numbersTopPlayers).ToList();
+            ShowInfo("уровню", numbersTopPlayers, sortedByLevel);
+            sortedByLevel = players.OrderByDescending(p => p.Power).Take(numbersTopPlayers).ToList();
+            ShowInfo("силе", numbersTopPlayers, sortedByLevel);
+        }
 
-            Console.WriteLine("Топ 3 по уровню: ");
+        static void ShowInfo(string nameTop, int numbersTopPlayers, List<Player> players)
+        {
+            Console.WriteLine($"Топ {numbersTopPlayers} по {nameTop}: ");
 
-            foreach (var player in sortedByLevel)
-            {
-                player.ShowInfo();
-            }
-
-            sortedByLevel = players.OrderByDescending(p => p.Power).Take(3);
-
-            Console.WriteLine("\nТоп 3 по силе: ");
-
-            foreach (var player in sortedByLevel)
+            foreach (var player in players)
             {
                 player.ShowInfo();
             }
