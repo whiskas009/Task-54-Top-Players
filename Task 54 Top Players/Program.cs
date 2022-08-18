@@ -23,9 +23,9 @@ namespace Task_54_Top_Players
             new Player("Кристина", 19, 850)};
 
             int numbersTopPlayers = 3;
-            var sortedByLevel = players.OrderByDescending(p => p.Level).Take(numbersTopPlayers).ToList();
+            var sortedByLevel = players.OrderByDescending(player => player.Level).Take(numbersTopPlayers).ToList();
             ShowInfo("уровню", numbersTopPlayers, sortedByLevel);
-            sortedByLevel = players.OrderByDescending(p => p.Power).Take(numbersTopPlayers).ToList();
+            sortedByLevel = players.OrderByDescending(player => player.Power).Take(numbersTopPlayers).ToList();
             ShowInfo("силе", numbersTopPlayers, sortedByLevel);
         }
 
