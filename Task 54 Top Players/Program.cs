@@ -29,7 +29,7 @@ namespace Task_54_Top_Players
             ShowInfo("силе", numbersTopPlayers, sortedByLevel);
         }
 
-        static void ShowInfo(string nameTop, int numbersTopPlayers, List<Player> players)
+        static private void ShowInfo(string nameTop, int numbersTopPlayers, List<Player> players)
         {
             Console.WriteLine($"Топ {numbersTopPlayers} по {nameTop}: ");
 
